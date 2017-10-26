@@ -107,7 +107,7 @@
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
       <SubComponents>
-        <Container class="javax.swing.JPanel" name="jPanel1">
+        <Container class="gui.ImagePanel" name="imagePanel">
 
           <Layout>
             <DimensionLayout dim="0">

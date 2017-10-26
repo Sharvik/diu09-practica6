@@ -6,6 +6,8 @@
 package gui;
 
 import javax.swing.JFileChooser;
+import javax.swing.filechooser.FileFilter;
+import javax.swing.filechooser.FileNameExtensionFilter;
 
 /**
  *
@@ -30,7 +32,7 @@ public class MainWindow extends javax.swing.JFrame {
     private void initComponents() {
 
         jScrollPane1 = new javax.swing.JScrollPane();
-        jPanel1 = new javax.swing.JPanel();
+        imagePanel = new gui.ImagePanel();
         jTextField1 = new javax.swing.JTextField();
         jTextField2 = new javax.swing.JTextField();
         jTextField3 = new javax.swing.JTextField();
@@ -46,18 +48,18 @@ public class MainWindow extends javax.swing.JFrame {
 
         jScrollPane1.setBorder(new javax.swing.border.MatteBorder(null));
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout imagePanelLayout = new javax.swing.GroupLayout(imagePanel);
+        imagePanel.setLayout(imagePanelLayout);
+        imagePanelLayout.setHorizontalGroup(
+            imagePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 455, Short.MAX_VALUE)
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        imagePanelLayout.setVerticalGroup(
+            imagePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 304, Short.MAX_VALUE)
         );
 
-        jScrollPane1.setViewportView(jPanel1);
+        jScrollPane1.setViewportView(imagePanel);
 
         jTextField1.setEditable(false);
 
@@ -143,7 +145,17 @@ public class MainWindow extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        JFileChooser fc;
+        JFileChooser fc = new JFileChooser(System.getProperty("user.home"));
+        
+        setFilter(fc);
+        
+        int res = fc.showOpenDialog(null);
+        
+        if(res == JFileChooser.APPROVE_OPTION) {
+            imagePanel.setPath(fc.getSelectedFile().getAbsolutePath());
+            if(imagePanel.setImage() == imagePanel.SUCCESS)
+                imagePanel.paintComponent(imagePanel.getGraphics());
+        }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
@@ -182,8 +194,8 @@ public class MainWindow extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private gui.ImagePanel imagePanel;
     private javax.swing.JButton jButton1;
-    private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
@@ -195,4 +207,32 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField8;
     private javax.swing.JTextField jTextField9;
     // End of variables declaration//GEN-END:variables
+
+    private void setFilter(JFileChooser fc) {
+        FileFilter filter = new FileNameExtensionFilter(
+                "JPEG [*.jpg, *.jpeg, *.jpe, *.jfif]", 
+                "jpg", 
+                "jpeg", 
+                "jpe",
+                "jfif");
+        fc.addChoosableFileFilter(filter);
+        filter = new FileNameExtensionFilter(
+                "Mapa de bits [*.bmp, *.dib]", 
+                "bmp",
+                "dib");
+        fc.addChoosableFileFilter(filter);
+        filter = new FileNameExtensionFilter(
+                "GIF [*.gif]", 
+                "gif");
+        fc.addChoosableFileFilter(filter);
+        filter = new FileNameExtensionFilter(
+                "TIFF [*.tif, *.tiff]", 
+                "tif", 
+                "tiff");
+        fc.addChoosableFileFilter(filter);
+        filter = new FileNameExtensionFilter(
+                "PNG [*.png]", 
+                "png");
+        fc.addChoosableFileFilter(filter);
+    }
 }
