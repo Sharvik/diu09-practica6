@@ -32,7 +32,6 @@ public class MainWindow extends javax.swing.JFrame {
     private void initComponents() {
 
         jScrollPane1 = new javax.swing.JScrollPane();
-        imagePanel = new gui.ImagePanel();
         jTextField1 = new javax.swing.JTextField();
         jTextField2 = new javax.swing.JTextField();
         jTextField3 = new javax.swing.JTextField();
@@ -47,19 +46,6 @@ public class MainWindow extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jScrollPane1.setBorder(new javax.swing.border.MatteBorder(null));
-
-        javax.swing.GroupLayout imagePanelLayout = new javax.swing.GroupLayout(imagePanel);
-        imagePanel.setLayout(imagePanelLayout);
-        imagePanelLayout.setHorizontalGroup(
-            imagePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 455, Short.MAX_VALUE)
-        );
-        imagePanelLayout.setVerticalGroup(
-            imagePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 304, Short.MAX_VALUE)
-        );
-
-        jScrollPane1.setViewportView(imagePanel);
 
         jTextField1.setEditable(false);
 
@@ -152,9 +138,9 @@ public class MainWindow extends javax.swing.JFrame {
         int res = fc.showOpenDialog(null);
         
         if(res == JFileChooser.APPROVE_OPTION) {
-            imagePanel.setPath(fc.getSelectedFile().getAbsolutePath());
+            /*imagePanel.setPath(fc.getSelectedFile().getAbsolutePath());
             if(imagePanel.setImage() == imagePanel.SUCCESS)
-                imagePanel.paintComponent(imagePanel.getGraphics());
+                imagePanel.paintComponent(imagePanel.getGraphics());*/
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -194,7 +180,6 @@ public class MainWindow extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private gui.ImagePanel imagePanel;
     private javax.swing.JButton jButton1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField jTextField1;
