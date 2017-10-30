@@ -59,7 +59,10 @@ public class ImagePanel extends JPanel {
     @Override
     public void paintComponent(Graphics g){
         if(image != null)
-            this.setPreferredSize(new Dimension(image.getWidth(), image.getHeight()));
+            this.setPreferredSize(
+                    new Dimension(
+                            image.getWidth(), 
+                            image.getHeight()));
         
         super.paintComponent(g);
         g.drawImage(image, 0, 0, null);
