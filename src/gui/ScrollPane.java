@@ -1,8 +1,12 @@
 package gui;
 
+import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.Point;
+import java.awt.event.AdjustmentEvent;
+import java.awt.event.AdjustmentListener;
+import javax.swing.BorderFactory;
 import javax.swing.JScrollBar;
 import javax.swing.JScrollPane;
 import javax.swing.JViewport;
@@ -13,42 +17,38 @@ public class ScrollPane extends JScrollPane {
     private JScrollBar hBar;
     private JScrollBar vBar;
     private Point origin;
-
-    public ScrollPane(ImagePanel panel) {
-        this.panel = panel;
-        
+    
+    public ScrollPane() {
+        hBar = this.getHorizontalScrollBar();
+        vBar = this.getVerticalScrollBar();
         view = this.getViewport();
-        hBar = new JScrollBar(JScrollBar.HORIZONTAL);
-        vBar = new JScrollBar(JScrollBar.VERTICAL);
         origin = new Point(0, 0);
         
-        this.setAutoscrolls(true);
-        this.setEnabled(true);
-        this.setPreferredSize(new Dimension(400, 400));
-        this.setHorizontalScrollBar(hBar);
-        this.setVerticalScrollBar(vBar);
+        hBar.addAdjustmentListener(barListener());
+        vBar.addAdjustmentListener(barListener());
         
         showPaint();
     }
     
-    public ScrollPane() {
-        view = this.getViewport();
-        hBar = new JScrollBar(JScrollBar.HORIZONTAL);
-        vBar = new JScrollBar(JScrollBar.VERTICAL);
-        origin = new Point(0, 0);
-        
-        this.setAutoscrolls(true);
-        this.setEnabled(true);
-        this.setPreferredSize(new Dimension(400, 400));
-        this.setHorizontalScrollBar(hBar);
-        this.setVerticalScrollBar(vBar);
+    private AdjustmentListener barListener() {
+        return (AdjustmentEvent e) -> {
+            origin = view.getViewPosition();
+            System.out.println(origin.toString());
+        };
     }
 
     private void showPaint() {
-        view.add(panel);
-        this.setViewport(view);
-        this.setVisible(true);
-        repaint();
+        if(panel != null) {
+            hBar.setValues(0, 10, 0, panel.getWidth());
+            vBar.setValues(0, 10, 0, panel.getHeight());
+            view.add(panel);
+        }
+        
+        this.setViewportBorder(
+                BorderFactory.createLineBorder(Color.black));
+        this.setAutoscrolls(true);
+        this.setEnabled(true);
+        this.setPreferredSize(new Dimension(450, 400));
     }
 
     public ImagePanel getPanel() {
@@ -64,4 +64,5 @@ public class ScrollPane extends JScrollPane {
     public void paintComponent(Graphics g){
         super.paintComponent(g);
     }
+
 }
