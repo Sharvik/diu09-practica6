@@ -50,7 +50,6 @@ public class ScrollPane extends JScrollPane {
             
             for (Component component : main.getContentPane().getComponents()) {
                 if(component instanceof JTextField) {
-                    System.out.println(((JTextField) component).getName());
                     switch(((JTextField) component).getName()) {
                         case "redMinValue":
                             ((JTextField) component).setText(
@@ -93,9 +92,6 @@ public class ScrollPane extends JScrollPane {
                     }
                 }
             }
-            
-            System.out.println("Upper Left Corner : " + origin.toString());
-            System.out.println("Lower Right Corner : " + end.toString());
         };
     }
 
