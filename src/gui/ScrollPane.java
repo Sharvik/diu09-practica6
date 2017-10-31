@@ -17,8 +17,11 @@ public class ScrollPane extends JScrollPane {
     private JScrollBar hBar;
     private JScrollBar vBar;
     private Point origin;
+    private EstadisticasImagen stats;
     
     public ScrollPane() {
+        stats = new EstadisticasImagen();
+        
         hBar = this.getHorizontalScrollBar();
         vBar = this.getVerticalScrollBar();
         view = this.getViewport();
@@ -33,7 +36,16 @@ public class ScrollPane extends JScrollPane {
     private AdjustmentListener barListener() {
         return (AdjustmentEvent e) -> {
             origin = view.getViewPosition();
+            Point end = new Point(origin.x + view.getWidth(),
+                                origin.y + view.getHeight());
+            
+            if(panel != null)
+                stats.calculaEstadisticas(panel.getImage(), 
+                                            origin, 
+                                            end);
+            
             System.out.println(origin.toString());
+            System.out.println(end.toString());
         };
     }
 
@@ -59,10 +71,17 @@ public class ScrollPane extends JScrollPane {
         this.panel = panel;
         showPaint();
     }
+
+    public EstadisticasImagen getStats() {
+        return stats;
+    }
+
+    public void setStats(EstadisticasImagen stats) {
+        this.stats = stats;
+    }
     
     @Override
     public void paintComponent(Graphics g){
         super.paintComponent(g);
     }
-
 }
