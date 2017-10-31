@@ -28,10 +28,6 @@
                   <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="64" max="-2" attributes="0"/>
-                              <Component id="imageButton" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="redLabel" min="-2" max="-2" attributes="0"/>
                           </Group>
@@ -103,6 +99,11 @@
                       </Group>
                       <EmptySpace min="31" pref="31" max="-2" attributes="0"/>
                   </Group>
+                  <Group type="102" alignment="1" attributes="0">
+                      <EmptySpace max="32767" attributes="0"/>
+                      <Component id="imageButton" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="70" max="-2" attributes="0"/>
+                  </Group>
               </Group>
               <Component id="scrollPane" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
@@ -112,59 +113,56 @@
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="1" attributes="0">
-              <Group type="103" groupAlignment="1" attributes="0">
-                  <Group type="102" attributes="0">
-                      <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
-                      <Component id="redLabel" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="redMinLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="redMaxLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="redMeanLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="redMinValue" alignment="3" min="-2" pref="22" max="-2" attributes="0"/>
-                          <Component id="redMeanValue" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="redMaxValue" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="greenLabel" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="greenMinLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="greenMaxLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="greenMeanLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="greenMinValue" alignment="3" min="-2" pref="22" max="-2" attributes="0"/>
-                          <Component id="greenMeanValue" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="greenMaxValue" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
-                      <Component id="blueLabel" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="blueMinLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="blueMeanLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="blueMaxLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="blueMinValue" alignment="3" min="-2" pref="22" max="-2" attributes="0"/>
-                          <Component id="blueMaxValue" alignment="3" min="-2" pref="22" max="-2" attributes="0"/>
-                          <Component id="blueMeanValue" alignment="3" min="-2" pref="22" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace pref="53" max="32767" attributes="0"/>
-                      <Component id="imageButton" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" attributes="0">
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="scrollPane" pref="0" max="32767" attributes="0"/>
-                  </Group>
-              </Group>
               <EmptySpace max="-2" attributes="0"/>
+              <Component id="scrollPane" pref="0" max="32767" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+          </Group>
+          <Group type="102" alignment="1" attributes="0">
+              <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
+              <Component id="redLabel" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="redMinLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="redMaxLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="redMeanLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="redMinValue" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="redMeanValue" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="redMaxValue" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Component id="greenLabel" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="greenMinLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="greenMaxLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="greenMeanLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="greenMinValue" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="greenMeanValue" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="greenMaxValue" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
+              <Component id="blueLabel" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="blueMinLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="blueMeanLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="blueMaxLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="blueMinValue" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="blueMaxValue" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="blueMeanValue" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace pref="34" max="32767" attributes="0"/>
+              <Component id="imageButton" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -173,16 +171,19 @@
     <Component class="javax.swing.JTextField" name="redMinValue">
       <Properties>
         <Property name="editable" type="boolean" value="false"/>
+        <Property name="enabled" type="boolean" value="false"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="greenMinValue">
       <Properties>
         <Property name="editable" type="boolean" value="false"/>
+        <Property name="enabled" type="boolean" value="false"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="blueMinValue">
       <Properties>
         <Property name="editable" type="boolean" value="false"/>
+        <Property name="enabled" type="boolean" value="false"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="imageButton">
@@ -200,31 +201,37 @@
     <Component class="javax.swing.JTextField" name="redMeanValue">
       <Properties>
         <Property name="editable" type="boolean" value="false"/>
+        <Property name="enabled" type="boolean" value="false"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="redMaxValue">
       <Properties>
         <Property name="editable" type="boolean" value="false"/>
+        <Property name="enabled" type="boolean" value="false"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="greenMeanValue">
       <Properties>
         <Property name="editable" type="boolean" value="false"/>
+        <Property name="enabled" type="boolean" value="false"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="greenMaxValue">
       <Properties>
         <Property name="editable" type="boolean" value="false"/>
+        <Property name="enabled" type="boolean" value="false"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="blueMaxValue">
       <Properties>
         <Property name="editable" type="boolean" value="false"/>
+        <Property name="enabled" type="boolean" value="false"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="blueMeanValue">
       <Properties>
         <Property name="editable" type="boolean" value="false"/>
+        <Property name="enabled" type="boolean" value="false"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="redLabel">
