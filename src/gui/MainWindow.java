@@ -56,15 +56,19 @@ public class MainWindow extends javax.swing.JFrame {
         blueMeanLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Image Stats");
 
         redMinValue.setEditable(false);
         redMinValue.setEnabled(false);
+        redMinValue.setName("redMinValue"); // NOI18N
 
         greenMinValue.setEditable(false);
         greenMinValue.setEnabled(false);
+        greenMinValue.setName("greenMinValue"); // NOI18N
 
         blueMinValue.setEditable(false);
         blueMinValue.setEnabled(false);
+        blueMinValue.setName("blueMinValue"); // NOI18N
 
         imageButton.setText("Select picture");
         imageButton.addActionListener(new java.awt.event.ActionListener() {
@@ -75,21 +79,27 @@ public class MainWindow extends javax.swing.JFrame {
 
         redMeanValue.setEditable(false);
         redMeanValue.setEnabled(false);
+        redMeanValue.setName("redMeanValue"); // NOI18N
 
         redMaxValue.setEditable(false);
         redMaxValue.setEnabled(false);
+        redMaxValue.setName("redMaxValue"); // NOI18N
 
         greenMeanValue.setEditable(false);
         greenMeanValue.setEnabled(false);
+        greenMeanValue.setName("greenMeanValue"); // NOI18N
 
         greenMaxValue.setEditable(false);
         greenMaxValue.setEnabled(false);
+        greenMaxValue.setName("greenMaxValue"); // NOI18N
 
         blueMaxValue.setEditable(false);
         blueMaxValue.setEnabled(false);
+        blueMaxValue.setName("blueMaxValue"); // NOI18N
 
         blueMeanValue.setEditable(false);
         blueMeanValue.setEnabled(false);
+        blueMeanValue.setName("blueMeanValue"); // NOI18N
 
         redLabel.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         redLabel.setText("Red : ");
@@ -233,7 +243,10 @@ public class MainWindow extends javax.swing.JFrame {
                 .addGap(32, 32, 32))
         );
 
+        scrollPane.setMain(this);
+
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void imageButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_imageButtonActionPerformed
@@ -247,10 +260,9 @@ public class MainWindow extends javax.swing.JFrame {
             ImagePanel imagePanel = new ImagePanel();
             if(imagePanel.setImage(fc.getSelectedFile()) != ImagePanel.FAILURE) {
                 scrollPane.setPanel(imagePanel);
+                imagePanel.repaint();
+                scrollPane.repaint();
             }
-            /*imagePanel.setPath(fc.getSelectedFile().getAbsolutePath());
-            if(imagePanel.setImage() == imagePanel.SUCCESS)
-                imagePanel.paintComponent(imagePanel.getGraphics());*/
         }
     }//GEN-LAST:event_imageButtonActionPerformed
 

@@ -33,8 +33,10 @@ public class EstadisticasImagen {
         for (int c : this.Componentes) {
             this.maximo[c] = ImageStatistics.max(imagenColor.getBand(c).
                 subimage(esqSupIzda.x, esqSupIzda.y, esqInfDcha.x, esqInfDcha.y));
+            
             this.minimo[c] = ImageStatistics.min(imagenColor.getBand(c).
                 subimage(esqSupIzda.x, esqSupIzda.y, esqInfDcha.x, esqInfDcha.y));
+            
             this.promedio[c] = (int) ImageStatistics.mean(imagenColor.getBand(0).
                 subimage(esqSupIzda.x, esqSupIzda.y, esqInfDcha.x, esqInfDcha.y));
         }
