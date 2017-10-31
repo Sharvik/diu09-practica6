@@ -265,7 +265,35 @@ public class MainWindow extends javax.swing.JFrame {
             }
         }
     }//GEN-LAST:event_imageButtonActionPerformed
-
+    
+    private void setFilter(JFileChooser fc) {
+        FileFilter filter = new FileNameExtensionFilter(
+                "JPEG [*.jpg, *.jpeg, *.jpe, *.jfif]", 
+                "jpg", 
+                "jpeg", 
+                "jpe",
+                "jfif");
+        fc.addChoosableFileFilter(filter);
+        filter = new FileNameExtensionFilter(
+                "Mapa de bits [*.bmp, *.dib]", 
+                "bmp",
+                "dib");
+        fc.addChoosableFileFilter(filter);
+        filter = new FileNameExtensionFilter(
+                "GIF [*.gif]", 
+                "gif");
+        fc.addChoosableFileFilter(filter);
+        filter = new FileNameExtensionFilter(
+                "TIFF [*.tif, *.tiff]", 
+                "tif", 
+                "tiff");
+        fc.addChoosableFileFilter(filter);
+        filter = new FileNameExtensionFilter(
+                "PNG [*.png]", 
+                "png");
+        fc.addChoosableFileFilter(filter);
+    }
+    
     /**
      * @param args the command line arguments
      */
@@ -326,32 +354,4 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JTextField redMinValue;
     private gui.ScrollPane scrollPane;
     // End of variables declaration//GEN-END:variables
-
-    private void setFilter(JFileChooser fc) {
-        FileFilter filter = new FileNameExtensionFilter(
-                "JPEG [*.jpg, *.jpeg, *.jpe, *.jfif]", 
-                "jpg", 
-                "jpeg", 
-                "jpe",
-                "jfif");
-        fc.addChoosableFileFilter(filter);
-        filter = new FileNameExtensionFilter(
-                "Mapa de bits [*.bmp, *.dib]", 
-                "bmp",
-                "dib");
-        fc.addChoosableFileFilter(filter);
-        filter = new FileNameExtensionFilter(
-                "GIF [*.gif]", 
-                "gif");
-        fc.addChoosableFileFilter(filter);
-        filter = new FileNameExtensionFilter(
-                "TIFF [*.tif, *.tiff]", 
-                "tif", 
-                "tiff");
-        fc.addChoosableFileFilter(filter);
-        filter = new FileNameExtensionFilter(
-                "PNG [*.png]", 
-                "png");
-        fc.addChoosableFileFilter(filter);
-    }
 }
