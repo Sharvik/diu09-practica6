@@ -27,89 +27,92 @@
           <Group type="102" attributes="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
-                      <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="greenLabel" min="-2" max="-2" attributes="0"/>
-                          <Component id="redLabel" min="-2" max="-2" attributes="0"/>
-                          <Component id="blueLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace pref="156" max="32767" attributes="0"/>
-                  </Group>
-                  <Group type="102" attributes="0">
-                      <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="redMinValue" alignment="0" min="-2" pref="44" max="-2" attributes="0"/>
-                                  <Component id="redMinLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="redMaxLabel" min="-2" max="-2" attributes="0"/>
-                                  <Component id="redMaxValue" min="-2" pref="44" max="-2" attributes="0"/>
+                                  <Component id="greenLabel" min="-2" max="-2" attributes="0"/>
+                                  <Component id="redLabel" min="-2" max="-2" attributes="0"/>
+                                  <Component id="blueLabel" alignment="0" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace max="32767" attributes="0"/>
-                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="redMeanLabel" alignment="1" max="32767" attributes="0"/>
-                                  <Component id="greenMeanLabel" alignment="1" max="32767" attributes="0"/>
-                                  <Component id="redMeanValue" alignment="1" max="32767" attributes="0"/>
-                              </Group>
-                          </Group>
-                          <Group type="102" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="greenMinValue" alignment="0" min="-2" pref="44" max="-2" attributes="0"/>
-                                  <Component id="greenMinLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" attributes="0">
-                                      <Component id="greenMaxLabel" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace pref="92" max="32767" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" attributes="0">
-                                      <Component id="greenMaxValue" max="32767" attributes="0"/>
-                                      <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
-                                      <Component id="greenMeanValue" max="32767" attributes="0"/>
-                                  </Group>
-                              </Group>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="blueMinLabel" min="-2" max="-2" attributes="0"/>
-                                  <Component id="blueMinValue" min="-2" pref="44" max="-2" attributes="0"/>
+                                  <Group type="102" attributes="0">
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="redMinValue" alignment="0" min="-2" pref="44" max="-2" attributes="0"/>
+                                          <Component id="redMinLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="redMaxLabel" min="-2" max="-2" attributes="0"/>
+                                          <Component id="redMaxValue" min="-2" pref="44" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace max="32767" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                          <Component id="redMeanLabel" alignment="1" max="32767" attributes="0"/>
+                                          <Component id="greenMeanLabel" alignment="1" max="32767" attributes="0"/>
+                                          <Component id="redMeanValue" alignment="1" max="32767" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <Group type="102" attributes="0">
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="greenMinValue" alignment="0" min="-2" pref="44" max="-2" attributes="0"/>
+                                          <Component id="greenMinLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Group type="102" attributes="0">
+                                              <Component id="greenMaxLabel" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace pref="92" max="32767" attributes="0"/>
+                                          </Group>
+                                          <Group type="102" attributes="0">
+                                              <Component id="greenMaxValue" max="32767" attributes="0"/>
+                                              <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
+                                              <Component id="greenMeanValue" max="32767" attributes="0"/>
+                                          </Group>
+                                      </Group>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="blueMinLabel" min="-2" max="-2" attributes="0"/>
+                                          <Component id="blueMinValue" min="-2" pref="44" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="blueMaxValue" min="-2" pref="45" max="-2" attributes="0"/>
+                                          <Component id="blueMaxLabel" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace max="32767" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                          <Component id="blueMeanLabel" max="32767" attributes="0"/>
+                                          <Component id="blueMeanValue" max="32767" attributes="0"/>
+                                      </Group>
+                                  </Group>
                               </Group>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="blueMaxValue" min="-2" pref="45" max="-2" attributes="0"/>
-                                  <Component id="blueMaxLabel" min="-2" max="-2" attributes="0"/>
-                              </Group>
+                              <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" attributes="0">
                               <EmptySpace max="32767" attributes="0"/>
-                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="blueMeanLabel" max="32767" attributes="0"/>
-                                  <Component id="blueMeanValue" max="32767" attributes="0"/>
-                              </Group>
+                              <Component id="imageButton" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="70" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace min="31" pref="31" max="-2" attributes="0"/>
+                      <Component id="scrollPane" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace max="32767" attributes="0"/>
-                      <Component id="imageButton" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="70" max="-2" attributes="0"/>
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                      <Component id="authorLabel" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <Component id="scrollPane" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="1" attributes="0">
-              <EmptySpace max="-2" attributes="0"/>
-              <Component id="scrollPane" pref="0" max="32767" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
-          </Group>
           <Group type="102" alignment="1" attributes="0">
               <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
               <Component id="redLabel" min="-2" max="-2" attributes="0"/>
@@ -153,9 +156,15 @@
                   <Component id="blueMaxValue" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="blueMeanValue" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="34" max="32767" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
               <Component id="imageButton" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
+          </Group>
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="scrollPane" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
+              <Component id="authorLabel" min="-2" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -307,6 +316,14 @@
     <Component class="javax.swing.JLabel" name="blueMeanLabel">
       <Properties>
         <Property name="text" type="java.lang.String" value="Avarage"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="authorLabel">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Cantarell" size="14" style="1"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="David Medina &amp; Geraldo Rodrigues"/>
       </Properties>
     </Component>
   </SubComponents>
