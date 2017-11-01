@@ -59,6 +59,7 @@ public class MainWindow extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Image Stats");
+        setResizable(false);
 
         redMinValue.setEditable(false);
         redMinValue.setEnabled(false);
