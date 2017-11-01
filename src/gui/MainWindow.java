@@ -6,6 +6,7 @@
 package gui;
 
 import javax.swing.JFileChooser;
+import javax.swing.JOptionPane;
 import javax.swing.filechooser.FileFilter;
 import javax.swing.filechooser.FileNameExtensionFilter;
 
@@ -252,41 +253,108 @@ public class MainWindow extends javax.swing.JFrame {
         int res = fc.showOpenDialog(null);
         
         if(res == JFileChooser.APPROVE_OPTION) {
-            ImagePanel imagePanel = new ImagePanel();
-            if(imagePanel.setImage(fc.getSelectedFile()) != ImagePanel.FAILURE) {
-                scrollPane.setPanel(imagePanel);
-                imagePanel.repaint();
-                scrollPane.repaint();
+            String filename = fc.getSelectedFile().getAbsolutePath();
+            if (!isImage(filename)) {
+                JOptionPane.showMessageDialog(
+                        null,
+                        "The file selected is not a valid image",
+                        "Error",
+                        JOptionPane.ERROR_MESSAGE);
+            } else {
+                ImagePanel imagePanel = new ImagePanel();
+                if(imagePanel.setImage(fc.getSelectedFile()) != ImagePanel.FAILURE) {
+                    scrollPane.setPanel(imagePanel);
+                    imagePanel.repaint();
+                    scrollPane.repaint();
+                    enableTextField();
+                }
             }
         }
     }//GEN-LAST:event_imageButtonActionPerformed
     
     private void setFilter(JFileChooser fc) {
         FileFilter filter = new FileNameExtensionFilter(
-                "JPEG [*.jpg, *.jpeg, *.jpe, *.jfif]", 
-                "jpg", 
-                "jpeg", 
+                "All pictures",
+                "jpg",
+                "jpeg",
+                "jpe",
+                "jfif",
+                "bmp",
+                "dib",
+                "tif",
+                "tiff",
+                "png");
+        fc.addChoosableFileFilter(filter);
+        filter = new FileNameExtensionFilter(
+                "JPEG [*.jpg, *.jpeg, *.jpe, *.jfif]",
+                "jpg",
+                "jpeg",
                 "jpe",
                 "jfif");
         fc.addChoosableFileFilter(filter);
         filter = new FileNameExtensionFilter(
-                "Mapa de bits [*.bmp, *.dib]", 
+                "Mapa de bits [*.bmp, *.dib]",
                 "bmp",
                 "dib");
         fc.addChoosableFileFilter(filter);
         filter = new FileNameExtensionFilter(
-                "GIF [*.gif]", 
+                "GIF [*.gif]",
                 "gif");
         fc.addChoosableFileFilter(filter);
         filter = new FileNameExtensionFilter(
-                "TIFF [*.tif, *.tiff]", 
-                "tif", 
+                "TIFF [*.tif, *.tiff]",
+                "tif",
                 "tiff");
         fc.addChoosableFileFilter(filter);
         filter = new FileNameExtensionFilter(
-                "PNG [*.png]", 
+                "PNG [*.png]",
                 "png");
         fc.addChoosableFileFilter(filter);
+    }
+    
+    private boolean isImage(String fileName) {
+        String extension = fileName.substring(
+                fileName.lastIndexOf(".")+1)
+                    .toLowerCase();
+        
+        switch(extension) {
+            case "jpeg":
+                return true;
+            case "jpg":
+                return true;
+            case "jpe":
+                return true;
+            case "jfif":
+                return true;
+            case "bmp":
+                return true;
+            case "dib":
+                return true;
+            case "gif":
+                return true;
+            case "tif":
+                return true;
+            case "tiff":
+                return true;
+            case "png":
+                return true;
+            default:
+                return false;
+        }
+    }
+    
+    private void enableTextField() {
+        redMinValue.setEnabled(true);
+        redMaxValue.setEnabled(true);
+        redMeanValue.setEnabled(true);
+        
+        greenMinValue.setEnabled(true);
+        greenMaxValue.setEnabled(true);
+        greenMeanValue.setEnabled(true);
+        
+        blueMinValue.setEnabled(true);
+        blueMaxValue.setEnabled(true);
+        blueMeanValue.setEnabled(true);
     }
     
     /**
