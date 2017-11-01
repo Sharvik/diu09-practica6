@@ -272,11 +272,7 @@ public class MainWindow extends javax.swing.JFrame {
                         "Error",
                         JOptionPane.ERROR_MESSAGE);
             } else {
-                ImagePanel imagePanel = new ImagePanel();
-                if(imagePanel.setImage(fc.getSelectedFile()) != ImagePanel.FAILURE) {
-                    scrollPane.setPanel(imagePanel);
-                    imagePanel.repaint();
-                    scrollPane.repaint();
+                if(scrollPane.setPanel(fc.getSelectedFile()) != ImagePanel.FAILURE) {
                     enableTextField();
                 }
             }

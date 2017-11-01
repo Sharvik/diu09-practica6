@@ -7,6 +7,7 @@ import java.awt.Graphics;
 import java.awt.Point;
 import java.awt.event.AdjustmentEvent;
 import java.awt.event.AdjustmentListener;
+import java.io.File;
 import javax.swing.BorderFactory;
 import javax.swing.JFrame;
 import javax.swing.JScrollBar;
@@ -25,6 +26,7 @@ public class ScrollPane extends JScrollPane {
     
     public ScrollPane() {
         stats = new EstadisticasImagen();
+        panel = new ImagePanel();
         
         hBar = this.getHorizontalScrollBar();
         vBar = this.getVerticalScrollBar();
@@ -43,7 +45,7 @@ public class ScrollPane extends JScrollPane {
             Point end = new Point(origin.x + view.getWidth(),
                                 origin.y + view.getHeight());
             
-            if(panel != null)
+            if(panel.getImage() != null)
                 stats.calculaEstadisticas(panel.getImage(), 
                                             origin, 
                                             end);
@@ -96,7 +98,7 @@ public class ScrollPane extends JScrollPane {
     }
 
     private void showPaint() {
-        if(panel != null) {
+        if(panel.getImage() != null) {
             hBar.setValues(0, 10, 0, panel.getWidth());
             vBar.setValues(0, 10, 0, panel.getHeight());
             view.add(panel);
@@ -107,6 +109,8 @@ public class ScrollPane extends JScrollPane {
         this.setAutoscrolls(true);
         this.setEnabled(true);
         this.setPreferredSize(new Dimension(450, 400));
+        this.repaint();
+        panel.repaint();
     }
 
     public ImagePanel getPanel() {
@@ -116,6 +120,14 @@ public class ScrollPane extends JScrollPane {
     public void setPanel(ImagePanel panel) {
         this.panel = panel;
         showPaint();
+    }
+    
+    public int setPanel(File file) {
+        if(panel.setImage(file) == ImagePanel.FAILURE)
+            return ImagePanel.FAILURE;
+        
+        showPaint();
+        return ImagePanel.SUCCESS;
     }
 
     public EstadisticasImagen getStats() {
