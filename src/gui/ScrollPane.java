@@ -9,7 +9,6 @@ import java.awt.event.AdjustmentEvent;
 import java.awt.event.AdjustmentListener;
 import java.io.File;
 import javax.swing.BorderFactory;
-import javax.swing.JFrame;
 import javax.swing.JScrollBar;
 import javax.swing.JScrollPane;
 import javax.swing.JTextField;
@@ -17,9 +16,9 @@ import javax.swing.JViewport;
 
 public class ScrollPane extends JScrollPane {
     private ImagePanel panel;
-    private JViewport view;
-    private JScrollBar hBar;
-    private JScrollBar vBar;
+    private final JViewport view;
+    private final JScrollBar hBar;
+    private final JScrollBar vBar;
     private Point origin;
     private EstadisticasImagen stats;
     private MainWindow main;
