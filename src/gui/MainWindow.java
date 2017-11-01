@@ -272,8 +272,14 @@ public class MainWindow extends javax.swing.JFrame {
                         "Error",
                         JOptionPane.ERROR_MESSAGE);
             } else {
-                if(scrollPane.setPanel(fc.getSelectedFile()) != ImagePanel.FAILURE) {
+                if(scrollPane.setPanel(fc.getSelectedFile()) == ImagePanel.SUCCESS) {
                     enableTextField();
+                } else {
+                    JOptionPane.showMessageDialog(
+                        null,
+                        "Unable to load the image",
+                        "Error",
+                        JOptionPane.ERROR_MESSAGE);
                 }
             }
         }
